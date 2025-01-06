@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Greeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #cc4040;
+            line-height: 1.6;
+        }
+
+        header {
+            /* background-color: #3b3b3b; */
+            background-color: #114364;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(240, 43, 43, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #3650f9;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .greeting {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .s-first{
+            margin: 20px;
+            width: 70px;
+            height: 35px;;
+            border-radius: 5px;
+            color: rgb(42, 28, 12);
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+<form action="Ticket Booking.html">
+    <header>
+        <h1>TrainBook</h1>
+        <nav>
+            <ul>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="Home.html" >HOME</a></li>
+                <li style="display:inline-block ;  margin-top: 20px;"><a href="Ticket Booking.html">Book ticket</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="tracking page.html">tracking</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="Coustomer Support.html">Customer Support</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="about page.html">About</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="Contact page.html">Contact</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to the Language Page</h1>
+        <p>Select a language to see the greeting:</p>
+        <select id="languageSelector" onchange="displayGreeting()">
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+            <option value="italian">Italian</option>
+        </select>
+        <div class="form-group">
+            <button class="s-first" type="submit">CLICK</button>
+        </div>
+        <div id="greeting" class="greeting"></div>
+    </form>
+    </div>
+
+    <script>
+        function displayGreeting() {
+            const language = document.getElementById("languageSelector").value;
+            const greetingDiv = document.getElementById("greeting");
+
+            let greetingMessage = "";
+
+            switch (language) {
+                case "english":
+                    greetingMessage = "Hello!";
+                    break;
+                case "spanish":
+                    greetingMessage = "¡Hola!";
+                    break;
+                case "french":
+                    greetingMessage = "Bonjour!";
+                    break;
+                case "german":
+                    greetingMessage = "Hallo!";
+                    break;
+                case "italian":
+                    greetingMessage = "Ciao!";
+                    break;
+                default:
+                    greetingMessage = "Hello!";
+            }
+
+            greetingDiv.textContent = greetingMessage;
+        }
+    </script>
+
+</body>
+</html>

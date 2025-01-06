@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <style>
+       
+       body{
+        background-color: #3b3b3b;
+        color: #333;
+        line-height: 1.6;
+       }
+       header{
+        background-color: #3b3b3b;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+       }
+       header .logo h1{
+font-size: 2.5px;
+        nav ul{
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          padding: 10px 0;
+}
+
+.about{
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+       }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+       
+
+       .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        .booking-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #000066;
+        } 
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            /* background-color: #2c3e50; */
+            background-color: #114364;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #34495e;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <form action="conform.html">
+        <header>
+            <h1>TrainBook</h1>
+            <nav>
+                <ul>
+                    <li style="display:inline-block ; margin-top: 20px;"><a href="Home.html" >HOME</a></li>
+                    <li style="display:inline-block ;  margin-top: 20px;"><a href="Ticket Booking.html">Book ticket</a></li>
+                    <li style="display:inline-block ; margin-top: 20px;"><a href="tracking page.html">tracking</a></li>
+                    <li style="display:inline-block ; margin-top: 20px;"><a href="Coustomer Support.html">Customer Support</a></li>
+                    <li style="display:inline-block ; margin-top: 20px;"><a href="about page.html">About</a></li>
+                    <li style="display:inline-block ; margin-top: 20px;"><a href="Contact page.html">Contact</a></li>
+                    <li style="display:inline-block ; margin-top: 20px;"><a href="login.html">Login</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+        
+        <img src="C:\Users\Home\OneDrive\Desktop\train project\train photo.avif" style="border-radius: 20px;margin-top: 10px;">
+        
+        <br>
+        <br>
+    <div class="booking-container">
+        <h2>Train Ticket Booking</h2>
+        <form>
+            <br><br>
+            <div class="form-group">
+                <label for="departure">Departure</label>
+                <input type="text" id="departure" name="departure" placeholder="Enter departure location" required>
+            </div>
+            <div class="form-group">
+                <label for="arrival">Arrival</label>
+                <input type="text" id="arrival" name="arrival" placeholder="Enter arrival location" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="coach">Type of Coach</label>
+                <select id="coach" name="coach" required>
+                    <option value="">Select coach type</option>
+                    <option value="sleeper">Sleeper</option>
+                    <option value="ac">AC</option>
+                    <option value="general">General</option>
+                </select>
+            </div>
+            <button type="submit" class="search-button">Search Your Train</button>
+            
+        </form>
+    </div>
+    </form>
+</body>
+</html>

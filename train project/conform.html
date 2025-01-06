@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirmation-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .details {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .confirm-button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirm-button:hover {
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <form action="Cancellation page.html">
+    <div class="confirmation-container">
+        <h1>Ticket Confirmation</h1>
+        <div class="details">
+            <p><strong>Train Name:</strong> <span id="train-name"></span></p>
+            <p><strong>Date:</strong> <span id="travel-date"></span></p>
+            <p><strong>Departure Time:</strong> <span id="departure-time"></span></p>
+            <p><strong>Total Price:</strong> $<span id="total-price"></span></p>
+        </div>
+        <button class="confirm-button" onclick="proceedToPayment()">Confirm and Proceed to Payment</button>
+    </div>
+
+    <script>
+        // Simulated data for confirmation page
+        const trainDetails = {
+            trainName: "Express Train",
+            travelDate: "2024-01-01",
+            departureTime: "10:00 AM",
+            totalPrice: 100
+        };
+
+        // Populate the confirmation details
+        document.getElementById("train-name").innerText = trainDetails.trainName;
+        document.getElementById("travel-date").innerText = trainDetails.travelDate;
+        document.getElementById("departure-time").innerText = trainDetails.departureTime;
+        document.getElementById("total-price").innerText = trainDetails.totalPrice;
+
+        function proceedToPayment() {
+            alert("Proceeding to payment...");
+            // Redirect to a payment page or handle payment logic here
+            window.location.href = "payment.html";
+        }
+    </script>
+    </form>
+</body>
+</html>

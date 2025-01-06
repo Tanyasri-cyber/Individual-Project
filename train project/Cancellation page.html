@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancellation - Train Booking App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #382626;
+            padding: 20px;
+        }
+
+        header {
+            /* background-color: #2c3e50; */
+            background-color: #114364;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #34495e;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .cancellation-info {
+            font-size: 1rem;
+            margin: 20px 0;
+        }
+
+        .cancellation-info ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .cancellation-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .action-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .submit-btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* New page styling for cancellation reason form */
+        .reason-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .reason-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .reason-container input, .reason-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .reason-container button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .reason-container button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>TrainBook</h1>
+        <nav>
+            <ul>
+                >
+                <li style="display:inline-block ; margin-top: 20px;"><a href="Home.html" >HOME</a></li>
+                <li style="display:inline-block ;  margin-top: 20px;"><a href="Ticket Booking.html">Book ticket</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="tracking page.html">tracking</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="Coustomer Support.html">Customer Support</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="about page.html">About</a></li>
+                <li style="display:inline-block ; margin-top: 20px;"><a href="#">Contact</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+    <img src="C:\Users\Home\OneDrive\Desktop\train project\Black Train Transportation Business Logo.png" style="width: 150px; height: 150px; margin-right: 80%; margin-top: -20%; border-radius: 20px;">
+
+    <!-- Cancellation Page Content -->
+    <div class="container">
+        <h2>Cancellation Policy</h2>
+        <p>We understand that sometimes your travel plans may change. Please review our cancellation policy before proceeding with your cancellation request.</p>
+
+        <div class="cancellation-info">
+            <h3>Cancellation Policy</h3>
+            <p>At TrainBook, we offer flexible cancellation options, depending on the timing of your cancellation. Below are the details:</p>
+
+            <ul>
+                <li><strong>Up to 24 hours before departure:</strong> Full refund available minus a small processing fee.</li>
+                <li><strong>Within 24 hours but before 12 hours of departure:</strong> 50% refund of the total fare.</li>
+                <li><strong>Less than 12 hours before departure:</strong> No refund available.</li>
+                <li><strong>Special cases:</strong> In the event of train delays or cancellations by the operator, full refunds are provided.</li>
+            </ul>
+
+            <p>By proceeding with the cancellation, you agree to the terms and conditions of our cancellation policy as mentioned above.</p>
+        </div>
+
+        <div class="action-container">
+            <h3>Are you sure you want to cancel your booking?</h3>
+            <p>If you would like to cancel your booking, please click the button below.</p>
+            <!-- Cancel Booking Button -->
+            <button class="submit-btn" onclick="goToCancellationReasonPage()">Cancel Booking</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TrainBook. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Cancellation Reason Page -->
+    <div id="reasonPage" class="reason-container" style="display: none;">
+        <h2>Cancellation Reason</h2>
+        <p>Please provide the reason for your cancellation along with any additional details.</p>
+
+        <form id="cancellationForm">
+            <label for="reason">Reason for Cancellation:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Please explain why you're canceling..."></textarea>
+
+            <label for="details">Additional Details (optional):</label>
+            <textarea id="details" name="details" rows="4" placeholder="Any additional information you would like to provide?"></textarea>
+
+            <button type="submit">Submit Cancellation</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to display the cancellation reason page
+        function goToCancellationReasonPage() {
+            document.querySelector('.container').style.display = 'none';
+            document.querySelector('#reasonPage').style.display = 'block';
+        }
+
+        // Handle cancellation form submission
+        document.getElementById('cancellationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const reason = document.getElementById('reason').value;
+            const details = document.getElementById('details').value;
+            alert('Cancellation reason: ' + reason + '\nAdditional details: ' + details);
+        });
+    </script>
+
+</body>
+</html>
